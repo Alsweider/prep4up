@@ -1,3 +1,10 @@
+# -----------------------------------------------------------
+# Script: Prep4up
+# Author: Alsweider
+# -----------------------------------------------------------
+
+__version__ = "0.0.2"
+
 import sys
 import subprocess
 import importlib
@@ -17,6 +24,16 @@ for module in required_modules:
 # Import modul now
 import pyautogui
 
+# Reference resolution
+REF_W = 1920
+REF_H = 1080
+
+# Scaling for different screen resolutions
+def scale(x, y):
+    screen_w, screen_h = pyautogui.size()
+    new_x = int(screen_w * (x / REF_W))
+    new_y = int(screen_h * (y / REF_H))
+    return new_x, new_y
 
 # Parameter
 if len(sys.argv) < 2:
@@ -30,23 +47,23 @@ print("Please activate and maximise the Steam window. You have 10 seconds...")
 time.sleep(10)
 
 # Step 1: Click "View"
-pyautogui.click(111, 18)
+pyautogui.click(*scale(111, 18))
 time.sleep(2)
 
 # Step 2: Click Recordings & Screenshots
-pyautogui.click(180, 415)
+pyautogui.click(*scale(180, 415))
 time.sleep(2)
 
 # Step 3: Maximise screenshot manager (Doubleclick on upper edge of the window. Skip this if it already is max.)
-pyautogui.doubleClick(890, 21)
+pyautogui.doubleClick(*scale(890, 21))
 time.sleep(2)
 
 # Step 4: Open game list
-pyautogui.click(231, 75)
+pyautogui.click(*scale(231, 75))
 time.sleep(2)
 
 #Step 5: Click on search field
-pyautogui.click(231, 131)
+pyautogui.click(*scale(231, 131))
 time.sleep(2)
 
 # Step 6: Enter name of your game (until 2nd space, each additional character will abort search)
@@ -64,19 +81,19 @@ pyautogui.write(partial_name, interval=0.05)
 time.sleep(0.5)
 
 # Step 7: Click on 1st search result
-pyautogui.click(231, 160)
+pyautogui.click(*scale(231, 160))
 time.sleep(3)
 
 # Step 8: Click on 1st screenshot
-pyautogui.click(231, 160)
+pyautogui.click(*scale(231, 160))
 time.sleep(3)
 
 # Step 9: Click Share
-pyautogui.click(1856, 993)
+pyautogui.click(*scale(1856, 993))
 time.sleep(1)
 
 # Step 10: Click Share on Steam 
-pyautogui.click(1767, 723)
+pyautogui.click(*scale(1767, 723))
 time.sleep(1)
 
 #Done
