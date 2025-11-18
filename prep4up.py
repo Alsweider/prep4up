@@ -26,8 +26,8 @@ if len(sys.argv) < 2:
 game_name = sys.argv[1]
 
 # Time to react
-print("Please activate and maximise the Steam window. You have 5 seconds...")
-time.sleep(5)
+print("Please activate and maximise the Steam window. You have 10 seconds...")
+time.sleep(10)
 
 # Step 1: Click "View"
 pyautogui.click(111, 18)
@@ -65,11 +65,11 @@ time.sleep(1)
 
 # Step 7: Click on 1st search result
 pyautogui.click(231, 160)
-time.sleep(1)
+time.sleep(2)
 
 # Step 8: Click on 1st screenshot
 pyautogui.click(231, 160)
-time.sleep(1)
+time.sleep(2)
 
 # Step 9: Click Share
 pyautogui.click(1856, 993)
