@@ -9,8 +9,8 @@ Python macro script to upload the latest screenshot of a game on Steam.
 3. Maximise Steam.
 4. The script will navigate to the Steam Screenshot Manager automatically.
 
-Important: The x/y coordinates in the script are based on a screen resolution of 1920x1080. However, the coordinates may vary from one system to another, so adjustments might be necessary. To determine the correct coordinates for the click events, the tool [MouseInfo](https://mouseinfo.readthedocs.io/en/latest/) is recommended. 
-It may also be necessary to adjust the pauses between the individual steps, as slower systems may not have the required element ready to be clicked in time.
+Important: The x/y coordinates in the script are based on a screen resolution of 1920x1080. Although a function has been implemented to scale this reference resolution to different screen sizes, coordinates remain highly sensitive to even the slightest deviation. To determine the correct coordinates for the click events, the tool [MouseInfo](https://mouseinfo.readthedocs.io/en/latest/) is recommended. 
+It may also be necessary to adjust the pauses between the individual steps, as slower systems may not have the required element ready to be clicked in time. Depending on the number of screenshots, the loading time of the screenshot manager can vary significantly.
 
 The script assumes the following: Steam has been freshly launched and is maximised. The screenshot manager is not open. The most recent screenshot is available locally in the screenshot folder, but has not yet been uploaded.
 
