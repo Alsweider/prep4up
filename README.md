@@ -14,5 +14,5 @@ It may also be necessary to adjust the pauses between the individual steps, as s
 
 ## Requirements
 - [Python](https://www.python.org) 3.10 or newer
-- pyautogui (the script will automatically install it if missing)
+- [pyautogui](https://pyautogui.readthedocs.io/en/latest/) (the script will automatically install it if missing)
 - [Steam client](https://store.steampowered.com/about/)
