@@ -31,23 +31,23 @@ time.sleep(10)
 
 # Step 1: Click "View"
 pyautogui.click(111, 18)
-time.sleep(1)
+time.sleep(2)
 
 # Step 2: Click Recordings & Screenshots
 pyautogui.click(180, 415)
-time.sleep(1)
+time.sleep(2)
 
 # Step 3: Maximise screenshot manager (Doubleclick on upper edge of the window. Skip this if it already is max.)
 pyautogui.doubleClick(890, 21)
-time.sleep(1)
+time.sleep(2)
 
 # Step 4: Open game list
 pyautogui.click(231, 75)
-time.sleep(1)
+time.sleep(2)
 
 #Step 5: Click on search field
 pyautogui.click(231, 131)
-time.sleep(1)
+time.sleep(2)
 
 # Step 6: Enter name of your game (until 2nd space, each additional character will abort search)
 space_count = 0
@@ -61,15 +61,15 @@ for char in game_name:
         break
 
 pyautogui.write(partial_name, interval=0.05)
-time.sleep(1)
+time.sleep(0.5)
 
 # Step 7: Click on 1st search result
 pyautogui.click(231, 160)
-time.sleep(2)
+time.sleep(3)
 
 # Step 8: Click on 1st screenshot
 pyautogui.click(231, 160)
-time.sleep(2)
+time.sleep(3)
 
 # Step 9: Click Share
 pyautogui.click(1856, 993)
